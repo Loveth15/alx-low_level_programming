@@ -28,6 +28,6 @@ int main(void)
 	else
 	{
 		printf("Last digit of %d is %d and is less than 6 and not zero\n", n, lst_n);
-	return (0);
 	}
+	return (0);
 }
