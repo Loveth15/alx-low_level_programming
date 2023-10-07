@@ -16,13 +16,13 @@ int main(void)
 	e = 'A';
 	while (c <= 'z' && e <= 'Z')
 	{
-		putchar (e);
+		putchar (c);
 		c = c + 1;
 	}
 
 	while (e <= 'Z')
 	{
-		putchar(c);
+		putchar(e);
 		e = e + 1;
 	}
 
