@@ -28,7 +28,7 @@ _putchar('a');
 
 _putchar('r');
 
-_putchar('\0');
+_putchar('\n');
 
 return (0);
 
