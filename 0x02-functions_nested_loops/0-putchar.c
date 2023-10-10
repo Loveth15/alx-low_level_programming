@@ -1,15 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
+ * main - writes the character c to stdout
  *
- * Description: main - A program that prints out _putchar
- * Return: Always 0 (success)
+ * Description: A program that sets command
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
 int main(void)
 {
-	printf("_putchar\n");
 
-	return (0);
+_putchar('_');
+
+_putchar('p');
+
+_putchar('u');
+
+_putchar('t');
+
+_putchar('c');
+
+_putchar('h');
+
+_putchar('a');
+
+_putchar('r');
+
+_putchar('\0');
+
+return (0);
+
 }
