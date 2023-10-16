@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 
 /**
  * _strlen - This program checks the length of a string
@@ -11,5 +11,5 @@
 
 int _strlen(char *s)
 {
-	size_t _strlen(const char *s);
+	return (strlen(s));
 }
