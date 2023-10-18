@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int end = strlen(s) - 1;
 	char temp;
 
-	while (start > end)
+	while (start <= end)
 	{
 		temp = s[start];
 		s[start] = s[end];
