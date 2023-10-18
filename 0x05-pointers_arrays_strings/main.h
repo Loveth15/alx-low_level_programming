@@ -9,5 +9,6 @@ void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
 void positive_or_negative(int i);
+void puts2(char *str);
 
 #endif
