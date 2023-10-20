@@ -1,37 +1,39 @@
 #include "main.h"
-#include <string.h>
-#include <ctype.h>
 
 /**
- * *cap_string - This program capitalizes all words of a string
+ * cap_string - capitalize all words of a string
  * @str: string
- *
- * Return: Always 0.
+ * Return: `str`
  */
 
 char *cap_string(char *str)
 {
-	int length = strlen(str);
-	int capNextChar = 1;
-	int i;
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\" ";
 
-	for (i = 0; i < length; i++)
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ';' || str[i] == '.' || str[i] == ',' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			capNextChar = 1;
+			if (nots[c] == str[i])
+				trigger = 1;
 		}
-		else if (capNextChar && islower(str[i]))
+
+		if (trigger)
 		{
-			str[i] = toupper(str[i]);
-			capNextChar = 0;
-		}
-		else
-		{
-			str[i] = tolower(str[i]);
-			capNextChar = 0;
+			if (str[i] > 96 && str[i] < 123)
+			{
+				str[i] -= 32;
+				trigger = 0;
+			}
+			else if (str[i] > 64 && str[i] < 91)
+				trigger = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
 		}
 	}
-
 	return (str);
 }
